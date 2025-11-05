@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Grid3X3, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,16 +35,16 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-10 items-center mt-10">
-          <Link href="#" className="">
+          <Link to="#" className="hover:text-purple-400 transition-colors">
             Home
           </Link>
-          <Link href="#" className="">
+          <Link to="#" className="hover:text-purple-400 transition-colors">
             About
           </Link>
-          <Link href="#" className="">
+          <Link to="#" className="hover:text-purple-400 transition-colors">
             Services
           </Link>
-          <Link href="#" className="">
+          <Link to="#" className="hover:text-purple-400 transition-colors">
             Contact
           </Link>
         </nav>
@@ -60,32 +60,16 @@ const Header = () => {
             transition={{ duration: 0.4, ease: "easeInOut" }}
             className="fixed top-0 left-0 w-full h-screen bg-black/90 flex flex-col justify-center items-center space-y-8 text-lg z-50"
           >
-            <Link
-              href="#"
-              onClick={toggleMenu}
-              className="hover:text-purple-400 transition-colors"
-            >
+            <Link to="#" onClick={toggleMenu} className="hover:text-purple-400 transition-colors">
               Home
             </Link>
-            <Link
-              href="#"
-              onClick={toggleMenu}
-              className="hover:text-purple-400 transition-colors"
-            >
+            <Link to="#" onClick={toggleMenu} className="hover:text-purple-400 transition-colors">
               About
             </Link>
-            <Link
-              href="#"
-              onClick={toggleMenu}
-              className="hover:text-purple-400 transition-colors"
-            >
+            <Link to="#" onClick={toggleMenu} className="hover:text-purple-400 transition-colors">
               Services
             </Link>
-            <Link
-              href="#"
-              onClick={toggleMenu}
-              className="hover:text-purple-400 transition-colors"
-            >
+            <Link to="#" onClick={toggleMenu} className="hover:text-purple-400 transition-colors">
               Contact
             </Link>
           </motion.nav>
