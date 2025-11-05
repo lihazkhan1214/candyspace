@@ -9,7 +9,7 @@ const Hero = () => {
 
 
       <div 
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-top"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
 
@@ -22,7 +22,7 @@ const Hero = () => {
             <div className="grid grid-cols-2 gap-3 mb-4">
               <button className="flex flex-col border border-black items-center justify-center p-4 bg-[hsl(199,100%,40%)] rounded-xl text-white hover:opacity-90 transition-opacity">
                 
-                <p className="text-[10px] text-center uppercase leading-tight font-medium">
+                <p className="text-[12px] text-center uppercase leading-tight font-medium">
                   I'm a gentleman<br />looking to support<br />a lady
                 </p>
                 <img src={male} alt="" className="" />
